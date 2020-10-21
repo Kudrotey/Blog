@@ -1,0 +1,19 @@
+{% extends 'blog_app/base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+  <h5><a href="{% url 'blog_app:description' head.id %}">{{ head }}</a></h5>
+
+  <p><h6>Edit description:</h6></p>
+
+  <form action="{% url 'blog_app:edit_description' desc.id %}" method='post' class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    {% buttons %}
+      <button name='submit' class="btn btn-primary">Save changes</button>
+    {% endbuttons %}
+  </form>
+
+{% endblock content %}

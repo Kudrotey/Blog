@@ -1,0 +1,20 @@
+{% extends "blog_app/base.html" %}
+
+{% block page_header %}
+  <h2>Headlines</h2>
+{% endblock page_header %}
+
+{% block content %}
+
+  <ul>
+     {% for headline in headlines %}
+       <li><h3>
+	 <a href="{% url 'blog_app:description' headline.id %}">{{ headline }}</a>
+       </h3></li>
+     {% empty %}
+       <li><h3>There are no headlines that have been added yet</h3></li>
+     {% endfor %}
+  </ul>
+     
+  <h3><a href="{% url 'blog_app:new_headline' %}">Add a new headline</a></h3>
+{% endblock content %}

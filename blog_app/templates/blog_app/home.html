@@ -1,0 +1,15 @@
+{% extends "blog_app/base.html" %}
+
+{% block page_header %}
+  <div class="jumbotron">
+    <h1 class="display-2">Football News</h1>
+    
+    <p class="lead">Get your latest football news right here.
+       Sign up to add your own football news and view others.</p>
+
+    <a class="btn btn-warning" href="{% url 'users:register' %}"
+        role="button">Register &raquo;</a>
+  
+  </div>
+
+{% endblock page_header %}

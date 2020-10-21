@@ -1,0 +1,16 @@
+{% extends "blog_app/base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+  <h5>Add a new headline:</h5>
+
+  <form action="{% url 'blog_app:new_headline' %}" method='post' class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    {% buttons %}
+      <button name="submit" class="btn btn-primary">Add Headline</button>
+    {% endbuttons %}
+  </form>
+
+{% endblock content %}
