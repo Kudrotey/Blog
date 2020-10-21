@@ -1,5 +1,5 @@
 # Blog
-
+https://khuda-football-news.herokuapp.com/
 A simple football blog app that allows you to read and create articles.
 
 ### Run locally
